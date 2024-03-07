@@ -16,9 +16,10 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
   startButton.classList.add('hide');
-  shuffleQuestion = questions.sort(() => Math.random() -0.5);
+  shuffleQuestion = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainer.classList.remove('hide');
+  questionContainer.classList.add('block');
   setNextQuestion();
   quizScore = 0;
 }
@@ -29,20 +30,20 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-  console.log(person.person);
-    //questionElement.innerText = question.question;
-    question.answers.forEach((answer) => {
-      const button = document.createElement('button');
-      button.innerText = answer.text;
-      button.classList.add('btn');
-      if (answer.correct) {
-        button.dataset.correct = answer.correct;
-      }
-      button.addEventListener('click', selectAnswer);
-      answeButton.appendChild(button);
-    });
-  }
-  
+
+  questionElement.innerText = question.question;
+  question.answers.forEach((answer) => {
+    const button = document.createElement('button');
+    button.innerText = answer.text;
+    button.classList.add('btn');
+    if (answer.correct) {
+      button.dataset.correct = answer.correct;
+    }
+    button.addEventListener('click', selectAnswer);
+    answeButton.appendChild(button);
+  });
+}
+
 
 function resetState() {
   clearStatusClass(document.body);
@@ -55,7 +56,7 @@ function resetState() {
 function selectAnswer(e) {
   const selectButton = e.target;
   const correct = selectButton.dataset.correct;
-  setStatusClass(document.body,correct);
+  setStatusClass(document.body, correct);
   Array.from(answeButton.children).forEach((button) => {
     setStatusClass(button, button.dataset.correct);
   });
