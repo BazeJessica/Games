@@ -6,15 +6,28 @@
    hasBeenWatched:true
 }
 class Episode{
-    constructor(title,duration,hasBeenWatched){
+    constructor(title,duration,minutesWatched,watchedText,continueWatching){
         this.title=title;
         this.duration=duration;
-        this.hasBeenWatched=hasBeenWatched;
+       // this.hasBeenWatched=hasBeenWatched;
+
+        if(minutesWatched === duration  ){
+          this.watchedText="Watched";
+          this.continueWatching= false;
+        }else if(minutesWatched > 0 && minutesWatched < duration){
+          this.watchedText="Watching";
+          this.continueWatching=true;
+          
+        }else if(minutesWatched === 0){
+          this.watchedText="Not yet Watched";
+          this.continueWatching=false;
+        }
     }
+
 }
-let firstEpisode = new Episode("Seriouse courting ", 23, true);
-let secondEpisode =new Episode("That one faith ", 23, true) ;
-let thirdEpisode =new Episode(" Remeber the goal", 23, true) ;
+let firstEpisode = new Episode("Seriouse courting ", 23, 23);
+let secondEpisode =new Episode("That one faith ", 23, 20) ;
+let thirdEpisode =new Episode(" Remeber the goal", 23, 23) ;
 
 let episodes=[firstEpisode,secondEpisode,thirdEpisode]
 // =========================================
