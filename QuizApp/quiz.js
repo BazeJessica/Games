@@ -19,7 +19,7 @@ function startGame() {
   shuffleQuestion = questions.sort(() => Math.random() - 0.5);
   currentQuestionIndex = 0;
   questionContainer.classList.remove('hide');
-  questionContainer.classList.add('block');
+  //questionContainer.classList.add('block');
   setNextQuestion();
   quizScore = 0;
 }
