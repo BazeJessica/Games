@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    margin-bottom: 40px;
+    
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.container{
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: #292524;
+    color: #fafaf9;
+    font-family: 'sono',sans-serif;
+    padding: 48px 64px;
+}
+h1{
+    font-size: 35px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'coiny',sans-serif;
+    line-height: 1;
+    margin-top: 6px;
+    
+}
+.Fform{
+    background-color:#44403c ;
+    margin-bottom: 40px;
+    padding: 17px 35px;
+}
+a{
+    color:#3b82f6 ;
+}
+h4{
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'coiny',sans-serif;
+    
+}
+.fact{
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    padding: 16px 20px;
+    background-color: #44403c;
+    letter-spacing: -1px;
+   
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    
+}
+.vote-buttons{
+    margin-left: auto;
+}
+.f{
+    padding: 16px 25px;
+    margin-bottom: 40px;
+}
+.tag{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+ul{
+    list-style: none;
+}
+.logo{
+
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+}
+
+.logo >img{
+    height: 60px;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+
+}
+a:link{
+   color: aquamarine; 
+   text-decoration: none;
+}
+a:visited{
+    color: purple;
+}
+a:hover{
+    color:#3b82f6
+}
+a:active{
+    color: green;
+}
