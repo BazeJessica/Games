@@ -1,112 +1,208 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.header{
-    margin-bottom: 40px;
-    
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    max-width: 1500px;
-    margin: 0 auto;
+body {
+  background-color: #292524;
+  color: #fafaf9;
+  font-family: "sono", sans-serif;
+  padding: 48px 64px;
 }
 
-body{
-    background-color: #292524;
-    color: #fafaf9;
-    font-family: 'sono',sans-serif;
-    padding: 48px 64px;
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
 }
-h1{
-    font-size: 35px;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'coiny',sans-serif;
-    line-height: 1;
-    margin-top: 6px;
-    
+
+.header {
+  margin-bottom: 40px;
+
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.Fform{
-    background-color:#44403c ;
-    margin-bottom: 40px;
-    padding: 17px 35px;
+
+h1 {
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "coiny", sans-serif;
+  line-height: 1;
+  margin-top: 6px;
 }
-a{
-    color:#3b82f6 ;
+.Fform {
+  background-color: #44403c;
+  margin-bottom: 40px;
+  padding: 17px 35px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 16px;
 }
-h4{
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    font-family: 'coiny',sans-serif;
-    
+
+.Fform input,
+.Fform select {
+  background-color: #78716c;
+  border: none;
+  width: 180px;
+  border-radius: 100px;
+  padding: 16px;
+  font-size: 18px;
+  color: inherit;
+  font-family: inherit;
 }
-.fact{
-    font-size: 16px;
-    line-height: 1.4;
-    margin-bottom: 16px;
-    padding: 16px 20px;
-    background-color: #44403c;
-    letter-spacing: -1px;
+.Fform input::placeholder {
+  color: #fafaf9;
+}
+
+.Fform input:first-child {
+  flex-grow: 1;
+}
+.Fform span {
+  font-weight: 600;
+  font-size: 18px;
+  margin-right: 18px;
+}
+/* for fom*/
+@media(max-width:1000px){
+    body{
+        padding: 32px 48px;
+    }
+    .Fform{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .Fform input,
+.Fform select {
+    width: auto;
+}
+
+}
+a {
+  color: #3b82f6;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "coiny", sans-serif;
+}
+.fact {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  background-color: #44403c;
+  letter-spacing: -1px;
+  border-radius: 16px;
+
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+/* This part is used when the width hits below the required width,it should always be below the main 
+element being changed or manipulated*/
+@media( max-width: 1200px){
+    .fact{
+        align-items: flex-end;/* push all alements to the end*/
+        flex-direction: column;
+        gap: 10px;
+    }
+}
    
+.vote-buttons {
+  margin-left: auto;
+  flex-shrink: 0;
 
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    
+  display: flex;
+  gap: 8px;
 }
-.vote-buttons{
-    margin-left: auto;
+.vote-buttons button {
+  border: none;
+  background-color: #78716c;
+  font-size: 18px;
+  padding: 6px 12px;
+  border-radius: 80px;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
 }
-.f{
-    padding: 16px 25px;
-    margin-bottom: 40px;
+.vote-buttons button:hover {
+  background-color: #292524;
 }
-.tag{
-    text-transform: uppercase;
-    font-size: 14px;
-    padding-top: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
+.f {
+  padding: 16px 25px;
+  margin-bottom: 40px;
 }
-
-ul{
-    list-style: none;
-}
-.logo{
-
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    
-}
-
-.logo >img{
-    height: 60px;
+.tag {
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30%;
 }
 
-.main{
-    display: grid;
-    grid-template-columns: 250px 1fr;
+ul {
+  list-style: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
+.logo > img {
+  height: 60px;
 }
-a:link{
-   color: aquamarine; 
-   text-decoration: none;
+
+.main {
+  display: grid;
+  grid-template-columns: 250px 1fr;
 }
-a:visited{
-    color: purple;
+a:link,
+a:visited {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: 0.5s;
 }
-a:hover{
-    color:#3b82f6
+
+@media(max-width:900px){
+    .main{
+        grid-template-columns: 1fr;
+    }
 }
-a:active{
-    color: green;
+a:hover,
+a:active {
+  color: #3b82f6;
+}
+
+.btn {
+  border: none;
+  border-radius: 25px;
+  font-family: "coiny", sans-serif;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 16px 0 13px;
+  margin-bottom: 10px;
+  color: inherit;
+  transform: 0.3s;
+  cursor: pointer;
+  background-image: linear-gradient(135deg, #3b82f6, #ef4444, yellow, #16a34a);
+}
+.btn-large {
+  font-size: 20px;
+}
+.btn-category {
+  width: 100%;
+  background-color: #3b82f6;
+}
+.btn:hover {
+  transform: scale(110%) rotate(-2deg);
 }
